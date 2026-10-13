@@ -2,8 +2,8 @@
 
 An Apple-inspired, minimal Obsidian theme. It gives the workspace the look of macOS Notes, with a Finder and Terminal style tab strip (a solid rounded strip, thin dividers, a white rounded active tab and a circular "+" button).
 
-![minilite in light mode](screenshot.png)
-![minilite in dark mode](screenshot-dark.png)
+![minilite in light mode](screenshots/light.png)
+![minilite in dark mode](screenshots/dark.png)
 
 ## Install
 
