@@ -572,15 +572,15 @@ button.mod-cta {
 /* Remove the horizontal line across the top of the left ribbon */
 body .workspace-ribbon.mod-left::before,
 body .workspace-ribbon.mod-left:before {
-  border: 0 !important;
-  border-bottom: 0 !important;
-  box-shadow: none !important;
-  background: var(--ans-bg) !important;
+  display: none;
+  border: 0;
+  box-shadow: none;
+  background: var(--ans-bg);
 }
 body .workspace-ribbon.mod-left,
 body .workspace-ribbon.mod-left.is-collapsed {
-  border: 0 !important;
-  box-shadow: none !important;
+  border: 0;
+  box-shadow: none;
 }
 
 /* Belt and braces: kill every line source around the ribbon */
@@ -588,9 +588,6 @@ body .workspace-ribbon.mod-left.is-collapsed {
   --tab-outline-color: transparent;
   --divider-color: transparent;
   --background-modifier-border: transparent;
-}
-body .workspace-ribbon.mod-left::before {
-  display: none !important;
 }
 .workspace-ribbon .side-dock-actions,
 .workspace-ribbon .side-dock-settings {
@@ -660,15 +657,19 @@ body .workspace-ribbon.mod-left::before {
 .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
   position: relative;
 }
-.mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header:not(.is-active):not(:has(+ .is-active)):not(:last-child)::after {
+.mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header + .workspace-tab-header:not(.is-active)::before {
   display: block;
   content: "";
   position: absolute;
-  right: 0;
+  left: 0;
   top: 22%;
   height: 56%;
   width: 1px;
   background: var(--ans-tab-divider);
+}
+/* No divider beside the active pill */
+.mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active + .workspace-tab-header::before {
+  display: none;
 }
 
 /* Taller panels: +10px at the top, +15px at the bottom, identical on both sides */
