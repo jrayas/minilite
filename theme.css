@@ -423,7 +423,7 @@ body.theme-light.ans-yellow-blue { --link-color: #007aff; --link-external-color:
 .theme-dark,
 .theme-light {
   --nav-item-size: 14px;
-  --nav-item-weight: 500;
+  --nav-item-weight: 400;
   --nav-item-color: var(--ans-text);
   --nav-item-color-hover: var(--ans-text);
   --nav-item-color-active: var(--ans-side-select-text);
@@ -445,7 +445,7 @@ body.theme-light.ans-yellow-blue { --link-color: #007aff; --link-external-color:
 .nav-folder-title.is-active {
   background: var(--ans-side-select-bg);
   color: var(--ans-side-select-text);
-  font-weight: 600;
+  font-weight: 400;
 }
 .nav-file-title.is-active .nav-file-title-content,
 .nav-folder-title.is-active .nav-folder-title-content {
