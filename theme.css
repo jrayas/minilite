@@ -538,12 +538,20 @@ button.mod-cta {
 /* ==========================================================================
    Seamless top bar: ribbon and title bar share one flat background
    ========================================================================== */
-.titlebar,
-.titlebar-inner,
 .workspace-ribbon.mod-left,
 .workspace-ribbon.mod-right {
   background: var(--ans-bg);
   border: 0;
+}
+/* Windows draws the tab strip inside the title bar row, so the title bar must never paint over it */
+.titlebar,
+.titlebar-inner {
+  background: transparent;
+  border: 0;
+}
+.mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container {
+  position: relative;
+  z-index: 3;
 }
 /* Obsidian draws a boxed section at the top of the left ribbon; flatten it */
 .workspace-ribbon.mod-left::before {
